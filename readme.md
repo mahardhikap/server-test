@@ -37,3 +37,6 @@ enjoy
 ```
 node index.js
 ```
+
+try in postman:
+https://documenter.getpostman.com/view/26438294/2s9YypDhv7#76340a71-9516-4de5-a9da-193e78bad2e9
