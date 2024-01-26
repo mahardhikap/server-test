@@ -69,7 +69,7 @@ const getCart = async () => {
     return new Promise((resolve, reject) => {
       console.log('Model: my bought product');
       pool.query(
-        `SELECT p.id_produk, p.foto_produk, p.nama_produk, p.harga, k.pembelian FROM keranjang k JOIN produk p ON k.id_produk = p.id_produk WHERE pembelian = 1`,
+        `SELECT p.id_produk, p.foto_produk, p.nama_produk, p.harga, k.pembelian, k.id_keranjang FROM keranjang k JOIN produk p ON k.id_produk = p.id_produk WHERE pembelian = 1 ORDER BY id_keranjang DESC`,
         (err, results) => {
           if (!err) {
             resolve(results);
